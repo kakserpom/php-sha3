@@ -71,7 +71,7 @@ PHP_FUNCTION(sha3)
     if (ret != SHA3_SUCCESS) {
         zend_error(E_WARNING, "Unsupported sha3() output length");
         RETURN_FALSE;
-    }r
+    }
     
     Keccak_HashUpdate(&hashInstance, (unsigned char *) data, dataByteLength * 8);
     Keccak_HashFinal(&hashInstance, hashVal);
